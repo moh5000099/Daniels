@@ -1,0 +1,57 @@
+@media screen and (min-width: 0px) and (max-width:900px) {
+    html{
+        font-size: 13px;
+    }
+    header h2{
+        font-size: 3rem;
+    }
+    @keyframes typing2{
+        0%{
+            width: 0px;
+        }
+        10%{
+            width: 21rem;
+        }
+        20%{
+            width: 21rem;
+        }
+        30%{
+            width: 0px;
+        }
+        
+        31%{
+            width: 0px;
+        }
+        41%{
+            width: 16.5rem;
+        }
+        51%{
+            width: 16.5rem;
+        }
+        61%{
+            width: 0px;
+        }
+        
+        62%{
+            width: 0px;
+        }
+        72%{
+            width: 14.5rem;
+        }
+        85%{
+            width: 14.5rem;
+        }
+        95%{
+            width: 0px;
+        }
+        100%{
+            width: 0px;
+        }
+    }
+
+    /* 
+    can hide the active underline in small screen
+    .navbar .active::after{
+    width: 0%;
+    } */
+}

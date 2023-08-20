@@ -1,0 +1,640 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    z-index: 0;
+}
+
+a{
+    text-decoration: none;
+    color: inherit !important;
+}
+.mainColor{
+    color: #1c1c1c !important;
+}
+.bg-mainColor{
+    background-color: #1c1c1c !important;
+}
+.bg-main{
+    background-color: #f7f7f7;
+    position: relative;
+    z-index:1;
+}
+.topWord h2{
+    position: relative;
+    z-index: auto;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+.topWord h2::after{
+    content: "";
+    background-image: url(images/dots.png);
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 50%;
+    bottom: -10%;
+    left: 0;
+}
+.myBlack{
+    color: #212529 !important;
+}
+.bg-gray{
+    background-color: #f4f4f4 !important;
+}
+
+/************************************************************* NavBar *************************************************************/
+.navbar{
+    z-index: 100;
+}
+.navbar-brand{
+    font-weight: 800 !important;
+}
+.navbar a{
+    display: inline-block;
+    position: relative;
+}
+.navbar a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #1c1c1c;
+    transition: all 0.5s 0s ease;
+}
+.navbar .active::after{
+    width: 100%;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+/************************************************************* Header *************************************************************/
+header{
+    background-image: url(images/bg.jpg);
+    /* background-position: center; */
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+}
+header h1{
+    font-size: 3rem ;
+}
+header h2{
+    font-size: 4rem;
+    position: relative;
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
+.container{
+    z-index: 1;
+}
+
+header h1{
+    font-weight: 700;
+}
+
+.typingBox{
+    vertical-align: bottom;
+    overflow: hidden;
+    animation: typing2 infinite 10s;
+}
+header h2 .typingBox::after{
+    content: "";
+    white-space: nowrap;
+    animation: typingAfter2 infinite 10s;
+}
+header h2::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 5%;
+    width: 1px;
+    height: 95%;
+    background-color: white;
+}
+
+@keyframes typing2{
+    0%{
+        width: 0px;
+    }
+    10%{
+        width: 27rem;
+    }
+    20%{
+        width: 27rem;
+    }
+    30%{
+        width: 0px;
+    }
+    
+    31%{
+        width: 0px;
+    }
+    41%{
+        width: 21.5rem;
+    }
+    51%{
+        width: 21.5rem;
+    }
+    61%{
+        width: 0px;
+    }
+    
+    62%{
+        width: 0px;
+    }
+    72%{
+        width: 19.25rem;
+    }
+    85%{
+        width: 19.25rem;
+    }
+    95%{
+        width: 0px;
+    }
+    100%{
+        width: 0px;
+    }
+}
+@keyframes typingAfter2{
+    0%{
+        content: "Larry Daniels";
+    }
+    30%{
+        content: "Larry Daniels";
+    }
+    
+    31%{
+        content: "Developer";
+    }
+    61%{
+        content: "Developer";
+    }
+    
+    62%{
+        content: "Designer";
+    }
+    95%{
+        content: "Designer";
+    }
+
+}
+
+/* .cursor{
+    background-color: white;
+    width: 2px;
+    height: 50px;
+    transform: translateY(10px);
+} */
+
+/* header h2 span::after{
+    content: "";
+    animation: typing 15s 0s infinite ease-in-out;
+}
+
+@keyframes typing {
+    0%{
+        content: "";
+    }
+    0.25%{
+        content: "L";
+    }
+    0.5%{
+        content: "La";
+    }
+    0.75%{
+        content: "Lar";
+    }
+    1%{
+        content: "Larr";
+    }
+    1.25%{
+        content: "Larry";
+    }
+    1.5%{
+        content: "Larry ";
+    }
+    1.75%{
+        content: "Larry D";
+    }
+    2%{
+        content: "Larry Da";
+    }
+    2.25%{
+        content: "Larry Dan";
+    }
+    2.5%{
+        content: "Larry Dani";
+    }
+    2.75%{
+        content: "Larry Danie";
+    }
+    3%{
+        content: "Larry Daniel";
+    }
+    3.25%{
+        content: "Larry Daniels";
+    }
+    3.5%{
+        content: "Larry Daniels ";
+    }
+    30%{
+        content: "Larry Daniels ";
+    }
+    30.25%{
+        content: "Larry Daniels";
+    }
+    30.5%{
+        content: "Larry Daniel";
+    }
+    30.75%{
+        content: "Larry Danie";
+    }
+    31%{
+        content: "Larry Dani";
+    }
+    31.25%{
+        content: "Larry Dan";
+    }
+    31.5%{
+        content: "Larry Da";
+    }
+    31.75%{
+        content: "Larry D";
+    }
+    32%{
+        content: "Larry ";
+    }
+    32.25%{
+        content: "Larry";
+    }
+    32.5%{
+        content: "Larr";
+    }
+    32.75%{
+        content: "Lar";
+    }
+    33%{
+        content: "La";
+    }
+    33.25%{
+        content: "L";
+    }
+    33.5%{
+        content: "";
+    }
+    33.75%{
+        content: "D";
+    }
+    34%{
+        content: "De";
+    }
+    34.25%{
+        content: "Dev";
+    }
+    34.5%{
+        content: "Deve";
+    }
+    34.75%{
+        content: "Devel";
+    }
+    35%{
+        content: "Develo";
+    }
+    35.25%{
+        content: "Develop";
+    }
+    35.5%{
+        content: "Develope";
+    }
+    35.75%{
+        content: "Developer";
+    }
+    36%{
+        content: "Developer ";
+    }
+    65.5%{
+        content: "Developer ";
+    }
+    65.75%{
+        content: "Developer";
+    }
+    66%{
+        content: "Develope";
+    }
+    66.25%{
+        content: "Develop";
+    }
+    66.5%{
+        content: "Develo";
+    }
+    66.75%{
+        content: "Devel";
+    }
+    67%{
+        content: "Deve";
+    }
+    67.25%{
+        content: "Dev";
+    }
+    67.5%{
+        content: "De";
+    }
+    67.75%{
+        content: "D";
+    }
+    68%{
+        content: "";
+    }
+    68.25%{
+        content: "D";
+    }
+    68.5%{
+        content: "De";
+    }
+    68.75%{
+        content: "Des";
+    }
+    69%{
+        content: "Desi";
+    }
+    69.25%{
+        content: "Desig";
+    }
+    69.5%{
+        content: "Design";
+    }
+    69.75%{
+        content: "Designe";
+    }
+    70%{
+        content: "Designer";
+    }
+    70.25%{
+        content: "Designer ";
+    }
+    97.75%{
+        content: "Designer ";
+    }
+    98%{
+        content: "Designer";
+    }
+    98.25%{
+        content: "Designe";
+    }
+    98.5%{
+        content: "Design";
+    }
+    98.75%{
+        content: "Desig";
+    }
+    99%{
+        content: "Desi";
+    }
+    99.25%{
+        content: "Des";
+    }
+    99.5%{
+        content: "De";
+    }
+    99.75%{
+        content: "D";
+    }
+    100%{
+        content: "";
+    }
+
+} */
+
+.headerIcon {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.headerIcon i{
+    font-size: 0.75rem;
+    width: 32px;
+    height: 32px;
+}
+
+/************************************************************* Anout me *************************************************************/
+.aboutImgBox img{
+    position: relative;
+    z-index: 1;
+}
+.dots{
+    background-image: url(images/dots.png);
+    background-position: center;
+    background-repeat: space;
+    width: 80%;
+    height: 80%;
+    bottom: -7%;
+    left: -6%;
+    z-index: 0;
+}
+.about h2{
+    font-weight: 800;
+}
+.about h6{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+.backBar p{
+    color: #748182;
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.backBar{
+    box-shadow:0px 2px 7px rgba(0,0,0,0.5) inset !important;
+}
+.w-95{
+    width: 95%;
+}
+.w-80{
+    width: 80%;
+}
+.w-90{
+    width: 90%;
+}
+
+.but1{
+    color: #fff;
+    background: #1c1c1c;
+    font-size: 0.8rem;
+    padding: 8px 30px;
+    transition: all 0.5s 0s ease;
+}
+.but1:hover{
+    background: white;
+    color: #1c1c1c;
+}
+.about .but2{
+    background: #fff;
+    color: #1c1c1c;
+    font-size: 0.8rem;
+    padding: 8px 30px;
+    transition: all 0.5s 0s ease;
+}
+.about .but2:hover{
+    color: white;
+    background: #1c1c1c;
+}
+
+/************************************************************* Services *************************************************************/
+.servIcon {
+    background-color: #f4f4f4;
+    transition: all 0.5s 0s ease;
+}
+.servIcon i{
+    font-size: 1.75rem;
+    width: 75px;
+    height: 75px;
+}
+.servInner p{
+    font-size: 0.9rem !important;
+}
+.servInner:hover .servIcon{
+    color: white;
+    background-color: #1c1c1c;
+}
+
+/************************************************************* Portfolio *************************************************************/
+.port .nav-item button{
+    position: relative;
+}
+.port .nav-item button::after{
+    content: "";
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    border-bottom: #212529 2px solid;
+    transition: all 0.5s 0s ease;
+}
+.port .nav-item .active::after{
+    width: 90%;
+}
+
+.portItemInner{
+    position: relative;
+}
+
+.portItemOverlay{
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+    position: absolute;
+    top: 4%; /*1.5%*/
+    left: 1.5%;
+    height: 97%;
+    width: 97%;
+    transition: all 0.5s 0s ease;
+}
+.portItemInner:hover .portItemOverlay{
+    opacity: 0.9;
+    top: 1.5%;
+}
+.portItemInner .portItemOverlay h5{
+    transform: translateY(-100%);
+    transition: all 0.5s 0s ease;
+}
+.portItemInner:hover .portItemOverlay h5{
+    transform: translateY(0);
+}
+.portItemInner:hover .portItemOverlay{
+    opacity: 0.9;
+    top: 1.5%;
+}
+
+.portItemOverlay h5{
+    font-size: .75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.portItemOverlay .portIcon i{
+    font-size: 0.75rem;
+    width: 27px;
+    height: 27px;
+}
+.portItemOverlay .portIcon:hover{
+    color:#1c1c1c !important;
+    background: white !important;
+}
+
+/************************************************************* Testimonials *************************************************************/
+.carousel-indicators button{
+    background-color: #869791 !important;
+    height: 10px !important;
+    width: 10px !important;
+    border-radius: 50%;
+    margin: 0px 7px !important;
+}
+.carousel-item h5{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.carousel-item h6{
+    font-size: 0.75rem;
+}
+
+/************************************************************* Numbers *************************************************************/
+.numInnerItem h3{
+    font-weight: 800;
+}
+
+/************************************************************* Blog *************************************************************/
+.cardImg img{
+    transition: all 0.5s 0s ease;
+}
+.cardImg:hover img{
+    transform: scale(1.15);
+}
+.card-title{
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.card-text{
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #343434 !important;
+}
+.card-bot{
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding-bottom: 2px;
+}
+
+/************************************************************* Contact Us *************************************************************/
+.contactIcon{
+    background-color: #f4f4f4;
+    transition: all 0.5s 0s ease;
+}
+.contactIcon i{
+    font-size: 1.5rem;
+    width: 65px;
+    height: 65px;
+}
+.contactInfoInner:hover .contactIcon{
+    color: white;
+    background-color: #1c1c1c;
+}
+
+.contactInfoInner p{
+    font-size: 0.85rem;
+}
+
+.contact button{
+    margin-right: 100%; /*u can do it by give its parent .text-start instead of .text-center*/
+    /* margin-left: 100%;
+    transform: translateX(-100%); */
+}
+
+/************************************************************* Footer *************************************************************/
+footer p{
+    font-size: 0.80rem;
+    font-weight: 600;
+}
